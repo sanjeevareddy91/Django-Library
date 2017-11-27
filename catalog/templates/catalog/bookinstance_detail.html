@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<p><strong>UUID:</strong> <a href="{% url 'bookinstance-detail' bookinstance.id.pk %}">{{ book.id }}</a></p>
+<p><strong>BOOK:</strong> {{ bookinstance.book }}</p>
+<p><strong>IMPRINT:</strong> {{ bookinstance.imprint }}</p> 
+<p><strong>DUE_BACK:</strong> {{ bookinstance.due_date }}</p>  
+<p><strong>BORROWER:</strong> {{ bookinstance.borrower }}</p>
+<p><strong>STATUS:</strong> {{ bookinstance.status }}</p> 
+{% endblock %}
